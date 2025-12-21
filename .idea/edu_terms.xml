@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="TermsProjectSettings">
+    <currentTermsLanguage>en</currentTermsLanguage>
+    <terms>
+      <map>
+        <entry key="en">
+          <value>
+            <map>
+              <entry key="17794001">
+                <value>
+                  <list>
+                    <Term value="index" definition="A numerical position of an item in a list or sequence, starting from zero in Python." />
+                    <Term value="documentation" definition="Official or community-written reference material explaining how to use a programming language or library." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="17794002">
+                <value>
+                  <list>
+                    <Term value="2D List" definition="A list of lists, often used to represent a table or matrix structure." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="17794003">
+                <value>
+                  <list>
+                    <Term value="append()" definition="A built-in list method that adds an item to the end of a list." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="17794004">
+                <value>
+                  <list>
+                    <Term value="inclusive" definition="Indicates that the boundary value is included in the specified range." />
+                    <Term value="floating point" definition="A number that has a decimal point, representing non-integer values in programming." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="17794005">
+                <value>
+                  <list>
+                    <Term value="randomisation" definition="The process of generating unpredictable values, often using functions from Python's random module." />
+                    <Term value="Lists" definition="A built-in Python data structure that stores an ordered collection of items." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="17794006">
+                <value>
+                  <list>
+                    <Term value="input" definition="A built-in Python function that reads user input from the keyboard as a string." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="17794007">
+                <value>
+                  <list>
+                    <Term value="print" definition="A built-in Python function that outputs text or variables to the console." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="195716625">
+                <value>
+                  <list>
+                    <Term value="Arguments" definition="Values passed to a function when it is called." />
+                    <Term value="parameter" definition="Variables listed in a function’s definition to receive values from arguments." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="199568011">
+                <value>
+                  <list>
+                    <Term value="flow chart" definition="A diagram showing the sequence of steps and decisions in a process or program logic." />
+                    <Term value="game logic" definition="The set of rules and code that control how a game operates and responds to input." />
+                    <Term value="logical operator" definition="A symbol or word used to connect two or more conditions in programming, like 'and' or 'or'." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="216408927">
+                <value>
+                  <list>
+                    <Term value="dictionary" definition="A collection of key-value pairs, where each key maps to a value." />
+                    <Term value="reference" definition="A way to access or point to the actual object or function in memory." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="283125148">
+                <value>
+                  <list>
+                    <Term value="function" definition="A reusable block of code that performs a specific task when called." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="284492507">
+                <value>
+                  <list>
+                    <Term value="block" definition="A group of one or more statements treated as a unit, usually defined by indentation." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="342841397">
+                <value>
+                  <list>
+                    <Term value="inclusive" definition="Including the boundary values in a range, such as both 45 and 55 in 45 to 55 inclusive." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="367561985">
+                <value>
+                  <list>
+                    <Term value="built-in" definition="A function or feature included in the programming language by default." />
+                    <Term value="conditionals" definition="Statements that perform actions based on whether a condition is true or false." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="392892348">
+                <value>
+                  <list>
+                    <Term value="variable" definition="A named storage location used to hold a value in a program." />
+                    <Term value="String" definition="A sequence of characters, often used to represent text in programming." />
+                    <Term value="function" definition="A reusable block of code that performs a specific task when called." />
+                    <Term value="Loop" definition="A programming construct that repeats a block of code multiple times." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="417849496">
+                <value>
+                  <list>
+                    <Term value="elif" definition="A Python keyword for 'else if', used to check multiple exclusive conditions in sequence." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="476425553">
+                <value>
+                  <list>
+                    <Term value="flowchart" definition="A diagram that represents the sequence of steps and decisions in a program or process." />
+                    <Term value="function" definition="A reusable block of code that performs a specific task and can return a value." />
+                    <Term value="input" definition="A function that reads a value from the user via keyboard during program execution." />
+                    <Term value="score" definition="A value representing the sum or result of game actions, often used to determine a winner." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="526466484">
+                <value>
+                  <list>
+                    <Term value="TypeError" definition="An error raised when an operation is applied to an object of inappropriate type." />
+                    <Term value="type()" definition="A built-in Python function that returns the data type of an object." />
+                    <Term value="float()" definition="A function that converts a value to a floating-point number." />
+                    <Term value="str()" definition="A function that converts a value to a string representation." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="540859013">
+                <value>
+                  <list>
+                    <Term value="input()" definition="A built-in Python function to get user input from the keyboard as a string." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="566117749">
+                <value>
+                  <list>
+                    <Term value="key" definition="An identifier used to access a specific value in a dictionary." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="625529494">
+                <value>
+                  <list>
+                    <Term value="execute" definition="To run a program or code so that the computer performs its instructions." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="627596553">
+                <value>
+                  <list>
+                    <Term value="ASCII art" definition="Pictures or designs created using characters from the ASCII character set." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="636283032">
+                <value>
+                  <list>
+                    <Term value="len()" definition="A built-in Python function that returns the number of items in an object." />
+                    <Term value="input()" definition="A built-in Python function that reads a line of text from user input." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="653216157">
+                <value>
+                  <list>
+                    <Term value="ASCII Art" definition="Text-based art created using characters instead of images, often used for decoration in console programs." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="785894060">
+                <value>
+                  <list>
+                    <Term value="debug" definition="The process of finding and fixing errors or bugs in a program." />
+                    <Term value="diagnose" definition="To analyze and identify the cause of a problem or bug in code." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="796392606">
+                <value>
+                  <list>
+                    <Term value="parameters" definition="Variables listed in a function definition to receive values when the function is called." />
+                    <Term value="argument" definition="Values passed to a function's parameters during a function call." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="900654030">
+                <value>
+                  <list>
+                    <Term value="List" definition="A built-in Python data structure that stores an ordered, changeable collection of items." />
+                    <Term value="function" definition="A block of reusable code that performs a specific task when called." />
+                    <Term value="while loop" definition="A control flow statement that repeats code as long as a condition is true." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="915669702">
+                <value>
+                  <list>
+                    <Term value="function" definition="A named block of code that performs a specific task and can be reused." />
+                    <Term value="variable" definition="A named storage location for data that can change during program execution." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="925561270">
+                <value>
+                  <list>
+                    <Term value="key" definition="An identifier used to access a value in a dictionary." />
+                    <Term value="value" definition="The data or object associated with a key in a dictionary." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="997111556">
+                <value>
+                  <list>
+                    <Term value="floating point" definition="A number with a decimal point, representing real numbers in programming." />
+                    <Term value="expression" definition="A combination of values and operators that evaluates to a single value." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1044169934">
+                <value>
+                  <list>
+                    <Term value="while loop" definition="A control flow statement that repeatedly executes a block of code as long as a condition is true." />
+                    <Term value="for loop" definition="A control flow statement for iterating over a sequence such as a list, tuple, or string." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1179865809">
+                <value>
+                  <list>
+                    <Term value="print" definition="A built-in Python function that outputs text or data to the console." />
+                    <Term value="input" definition="A built-in Python function that reads user input from the console." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1199998776">
+                <value>
+                  <list>
+                    <Term value="Import" definition="A statement used to include external modules or files in your Python program." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1206289300">
+                <value>
+                  <list>
+                    <Term value="range" definition="A built-in Python function that generates a sequence of numbers, often used for looping." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1277708657">
+                <value>
+                  <list>
+                    <Term value="block scope" definition="A scope limited to a specific code block, like inside loops or conditionals." />
+                    <Term value="function scope" definition="A scope limited to the body of a function; variables are accessible only within the function." />
+                    <Term value="global scope" definition="A scope where variables are accessible throughout the entire program, outside all functions and classes." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1298813328">
+                <value>
+                  <list>
+                    <Term value="Exceptions" definition="Errors detected during execution that can be handled to prevent program crashes." />
+                    <Term value="TypeError" definition="An exception raised when an operation is applied to an object of inappropriate type." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1304427684">
+                <value>
+                  <list>
+                    <Term value="PyCharm" definition="An Integrated Development Environment (IDE) used for Python programming, offering code analysis and debugging tools." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1307993871">
+                <value>
+                  <list>
+                    <Term value="debugging" definition="The process of finding and fixing errors or bugs in computer programs." />
+                    <Term value="execution" definition="The process of running a program or a piece of code by the computer." />
+                    <Term value="modules" definition="Reusable files or libraries containing Python code, such as functions or classes, to be imported in programs." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1336938375">
+                <value>
+                  <list>
+                    <Term value="control flow" definition="The order in which individual statements or instructions are executed in a program." />
+                    <Term value="execution paths" definition="Different possible routes the program can take during execution, based on conditions or logic." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1517941988">
+                <value>
+                  <list>
+                    <Term value="For Loop" definition="A control structure that repeats a block of code for each item in a sequence." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1521411200">
+                <value>
+                  <list>
+                    <Term value="variable" definition="A named storage location used to hold data that can be changed during program execution." />
+                    <Term value="input cursor" definition="The blinking marker indicating where user input will be typed in a console or text field." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1566856357">
+                <value>
+                  <list>
+                    <Term value="debug" definition="The process of finding and fixing errors or problems in your code." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1592611158">
+                <value>
+                  <list>
+                    <Term value="conditional" definition="A statement that executes code only if a specific condition is true or false." />
+                    <Term value="variable" definition="A named storage location used to hold a value in a program." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1606163007">
+                <value>
+                  <list>
+                    <Term value="formatting" definition="Process of adjusting data display, such as setting number of decimal places in output." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1719245063">
+                <value>
+                  <list>
+                    <Term value="Instagram" definition="A popular social media platform for sharing photos and videos." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1720631818">
+                <value>
+                  <list>
+                    <Term value="for loop" definition="A control structure that repeats a block of code for each item in a sequence." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1730117572">
+                <value>
+                  <list>
+                    <Term value="concatenation" definition="Joining two or more strings or sequences end-to-end to form a single string." />
+                    <Term value="escape sequence" definition="A combination of characters that represents a special character, like newline or tab, in a string." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1744300585">
+                <value>
+                  <list>
+                    <Term value="functionality" definition="The set of features or behaviors a program or component provides to users." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1791388063">
+                <value>
+                  <list>
+                    <Term value="//" definition="Floor division operator; divides and returns the largest whole number less than or equal to the result." />
+                    <Term value="**" definition="Exponentiation operator; raises the number on the left to the power of the right." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1820122666">
+                <value>
+                  <list>
+                    <Term value="random.choice" definition="Function that returns a random element from a non-empty sequence, like a list." />
+                    <Term value="random module" definition="A Python library for generating random numbers and making random selections." />
+                    <Term value="shuffle" definition="Randomly rearranges the elements of a list in place." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1825435284">
+                <value>
+                  <list>
+                    <Term value="parameter" definition="A variable in a function definition that receives a value when the function is called." />
+                    <Term value="argument" definition="A value provided to a function when it is called, assigned to a parameter." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1902731480">
+                <value>
+                  <list>
+                    <Term value="NameErrorr" definition="An exception raised when a variable or function name is not found in the current scope." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1923669322">
+                <value>
+                  <list>
+                    <Term value="debugging" definition="The process of finding and fixing errors or bugs in computer programs." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1977144334">
+                <value>
+                  <list>
+                    <Term value="dictionary" definition="A Python data structure that stores key-value pairs for fast lookup and retrieval." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="2019991323">
+                <value>
+                  <list>
+                    <Term value="modulo" definition="An operator that returns the remainder after division of one number by another." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="2088487643">
+                <value>
+                  <list>
+                    <Term value="function call" definition="The act of executing a function by specifying its name and required arguments." />
+                  </list>
+                </value>
+              </entry>
+            </map>
+          </value>
+        </entry>
+      </map>
+    </terms>
+    <termsVersions>
+      <map>
+        <entry key="en" value="118" />
+      </map>
+    </termsVersions>
+  </component>
+</project>
