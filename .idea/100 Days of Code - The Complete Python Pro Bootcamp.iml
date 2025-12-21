@@ -8,4 +8,7 @@
     <orderEntry type="jdk" jdkName="Python 3.13 (100 Days of Code - The Complete Python Pro Bootcamp)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
+  </component>
 </module>
