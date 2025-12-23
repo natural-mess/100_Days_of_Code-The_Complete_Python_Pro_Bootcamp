@@ -24,3 +24,15 @@ for i in range(nr_numbers):
 char_list = list(password)
 random.shuffle(char_list)
 print(''.join(char_list))
+
+# Method 2
+# random.choices returns multiple random elements from the list with replacement
+rand_letters = random.choices(letters, k=nr_letters)
+rand_numbers = random.choices(numbers, k=nr_numbers)
+rand_symbols = random.choices(symbols, k=nr_symbols)
+password2 = rand_letters + rand_numbers + rand_symbols
+
+# random.sample returns a particular length list of items chosen from the sequence i.e. list, tuple, string or set.
+# Used for random sampling without replacement.
+randomized_password = random.sample(password2, k=len(password2))
+print(''.join(randomized_password))
