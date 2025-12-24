@@ -5,3 +5,6 @@ def format_name(f_name, l_name):
 
 
 print(format_name("AnGEla", "YU"))
+
+def is_leap_year(year):
+    return year % 4 == 0 and (year % 400 == 0 or year % 100 != 0)
