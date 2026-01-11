@@ -5,6 +5,7 @@ A simple Python Snake Game using Turtle graphics.
 ## Functionalities
 * Start, pause/resume game buttons
 * Highest score
+* Store highest score in an external file (when game newly starts, highest score is loaded from data.txt, when highest score is updated, it's stored in data.txt and it will replace the old highest score)
 * Collision with tail
 * Collision with wall
 
