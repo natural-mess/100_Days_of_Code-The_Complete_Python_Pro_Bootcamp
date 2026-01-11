@@ -3,4 +3,5 @@
 Python course from Angela Yu on Udemy.
 
 ## Project list
-* [Turtle Race Game](https://github.com/natural-mess/Turtle-Race-Game)
+* [Python Turtle Race Game](https://github.com/natural-mess/Python-Turtle-Race-Game)
+* [Python Snake Game](https://github.com/natural-mess/Python_Snake_Game)

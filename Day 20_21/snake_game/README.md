@@ -5,6 +5,8 @@ A simple Python Snake Game using Turtle graphics.
 ## Functionalities
 * Start, pause/resume game buttons
 * Highest score
+* Collision with tail
+* Collision with wall
 
 ## How to play
 The game requires Python 3 installed.
