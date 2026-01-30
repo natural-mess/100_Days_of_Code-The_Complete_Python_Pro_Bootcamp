@@ -47,7 +47,7 @@ def check_resource(current_resource, menu, choice):
     else:
         choice_resource = menu[choice]["ingredients"]
         for key in choice_resource.keys():
-            if current_resource[key] <= choice_resource[key]:
+            if current_resource[key] < choice_resource[key]:
                 resource_check_result = key
                 break
 
@@ -78,8 +78,8 @@ def update_resource(current_resource, menu, choice):
     return current_resource
 
 def coffee_machine():
-    current_resource = resources
-    menu = MENU
+    current_resource = resources.copy()
+    menu = MENU.copy()
     machine_money = 0
     while 1:
         coin_list = init_coin_list()
