@@ -79,6 +79,7 @@ For a real Pomodoro experience, use:
 - `main.py` - Main application code
 - `tomato.png` - Tomato icon displayed in the timer (required)
 
-## Author
+## Demo
+![alt text](demo/pomodoro1.png)
 
-Created as part of the "100 Days of Code - The Complete Python Pro Bootcamp" course (Day 28)
+![alt text](demo/pomodoro2.png)
