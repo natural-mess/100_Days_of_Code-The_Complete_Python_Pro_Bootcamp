@@ -9,3 +9,4 @@ Python course from Angela Yu on Udemy.
 * [Python Turtle Crossing Game](https://github.com/natural-mess/Python-Turtle-Crossing-Game)
 * [Python US States Guessing Game](https://github.com/natural-mess/Python-US-States-Guessing-Game)
 * [Python Pomodoro Timer](https://github.com/natural-mess/python-pomodoro-timer)
+* [Python Password Manager](https://github.com/natural-mess/Python-Password-Manager)
