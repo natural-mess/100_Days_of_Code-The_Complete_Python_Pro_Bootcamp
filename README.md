@@ -11,3 +11,4 @@ Python course from Angela Yu on Udemy.
 * [Python Pomodoro Timer](https://github.com/natural-mess/python-pomodoro-timer)
 * [Python Password Manager](https://github.com/natural-mess/Python-Password-Manager)
 * [Python Flash Card App](https://github.com/natural-mess/Python-Flash-Card-App)
+* [Python Quizzler App](https://github.com/natural-mess/Python-Quizzler-App)
