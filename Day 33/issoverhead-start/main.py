@@ -12,8 +12,8 @@ dotenv_path = find_dotenv()
 # load up the entries as environment variables
 load_dotenv(dotenv_path)
 
-MY_LAT = 48.837009 # Your latitude
-MY_LONG = 2.630090 # Your longitude
+MY_LAT = 48.856613 # Your latitude
+MY_LONG = 2.352222 # Your longitude
 
 def check_position():
     response = requests.get(url="http://api.open-notify.org/iss-now.json")
