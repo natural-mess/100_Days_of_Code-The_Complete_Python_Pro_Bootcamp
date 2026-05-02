@@ -12,3 +12,4 @@ Python course from Angela Yu on Udemy.
 * [Python Password Manager](https://github.com/natural-mess/Python-Password-Manager)
 * [Python Flash Card App](https://github.com/natural-mess/Python-Flash-Card-App)
 * [Python Quizzler App](https://github.com/natural-mess/Python-Quizzler-App)
+* [Python-Rain-Alert-Telegram-Bot](https://github.com/natural-mess/Python-Rain-Alert-Telegram-Bot)
