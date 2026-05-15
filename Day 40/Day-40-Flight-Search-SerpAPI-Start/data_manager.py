@@ -1,37 +1,49 @@
 import os
 import requests
-from requests.auth import HTTPBasicAuth
+import requests_cache
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv()
-
-SHEETY_PRICES_ENDPOINT = os.environ["SHEETY_PRICES_ENDPOINT"]
+# load up the entries as environment variables
+load_dotenv("D:/API/EnvironmentVariables/.env")
 
 class DataManager:
 
     def __init__(self):
-        self._user = os.environ["SHEETY_USERNAME"]
-        self._password = os.environ["SHEETY_PASSWORD"]
-        self._authorization = HTTPBasicAuth(self._user, self._password)
-        self.destination_data = {}
+        self._sheety_endpoint = os.environ.get("SHEETY_FLIGHT_URL_ENDPOINT")
+        self._sheety_user_endpoint = os.environ.get("SHEETY_FLIGHT_USERS_URL_ENDPOINT")
+        self._sheety_header = {"Authorization": f"Bearer {os.environ.get('SHEETY_FLIGHT_BEARER_TOKEN')}"}
 
     def get_destination_data(self):
-        response = requests.get(url=SHEETY_PRICES_ENDPOINT, auth=self._authorization)
-        data = response.json()
-        self.destination_data = data["prices"]
-        return self.destination_data
+        response = requests.get(url=self._sheety_endpoint, headers=self._sheety_header)
+        response.raise_for_status()
+        sheety_data = response.json()['flights']
+        return sheety_data
 
     # ==================== Updated the price in the spreadsheet ====================
 
     def update_lowest_price(self, row_id, new_price):
-        new_data = {
-            "price": {
-                "lowestPrice": new_price
+        sheety_request_body = {
+            "flight": {
+                "lowestPrice": new_price,
             }
         }
-        requests.put(
-            url=f"{SHEETY_PRICES_ENDPOINT}/{row_id}",
-            json=new_data,
-            auth=self._authorization
-        )
+        sheety_response = requests.put(url=f"{self._sheety_endpoint}/{row_id}", json=sheety_request_body,
+                                       headers=self._sheety_header)
+        # print(sheety_response.text)
+        sheety_response.raise_for_status()
+
+    def get_customer_emails(self):
+        response = requests.get(url=self._sheety_user_endpoint, headers=self._sheety_header)
+        response.raise_for_status()
+        sheety_data = response.json()['users']
+        email_list = []
+        for element in sheety_data:
+            email_list.append(element['whatIsYourEmail?'])
+        return email_list
+
+if __name__ == '__main__':
+    # Setup requests_cache
+    requests_cache.install_cache(expire_after=360)
+    data = DataManager()
+    print(data.get_destination_data())
+    print(data.get_customer_emails())
