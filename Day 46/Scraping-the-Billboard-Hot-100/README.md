@@ -30,13 +30,21 @@ pip install requests beautifulsoup4 ytmusicapi
 
 This project uses `ytmusicapi` with browser authentication. You need a `browser.json` file with your credentials.
 
-To generate it, run:
+To generate it:
 
-```bash
-ytmusicapi browser
-```
+1. Open YouTube Music in your browser and log in
+2. Open Developer Tools (`F12` or `Ctrl+Shift+I`)
+3. Go to the **Network** tab
+4. Click on any request to `music.youtube.com`
+5. Copy the full **request headers** (right-click the request → Copy → Copy request headers)
+6. Run the following command in your terminal:
 
-Follow the instructions to paste your request headers from your browser. This will create the `browser.json` file.
+   ```bash
+   ytmusicapi browser
+   ```
+
+7. When prompted, paste the copied request headers and press Enter twice
+8. This generates a `browser.json` file in the current directory — move it to the project folder if needed
 
 ## Usage
 

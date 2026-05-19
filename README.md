@@ -16,3 +16,4 @@ Python course from Angela Yu on Udemy.
 * [Python Stock News Telegram Bot](./Day%2036/stock-news-extrahard-start/)
 * [Python Workout Tracking with Google Sheet](/Day%2038/WorkoutTracking/)
 * [Python Flight Club](https://github.com/natural-mess/Python-Flight-Club)
+* [Python Billboard Hot 100 to YouTube Music Playlist](https://github.com/natural-mess/Python-Billboard-Hot-100-to-YouTube-Music-Playlist)
