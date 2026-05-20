@@ -214,3 +214,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Browser json for ytmusicapi
+Day 46/Scraping-the-Billboard-Hot-100/browser.json
