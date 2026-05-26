@@ -18,3 +18,4 @@ Python course from Angela Yu on Udemy.
 * [Python Flight Club](https://github.com/natural-mess/Python-Flight-Club)
 * [Python Billboard Hot 100 to YouTube Music Playlist](https://github.com/natural-mess/Python-Billboard-Hot-100-to-YouTube-Music-Playlist)
 * [Python Amazon Price Tracking](./Day%2047/Python-Amazon-Price-Tracking/)
+* [Python Auto Cookie Clicker](https://github.com/natural-mess/Python-Auto-Cookie-Clicker)
