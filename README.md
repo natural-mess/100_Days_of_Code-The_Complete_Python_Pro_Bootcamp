@@ -20,3 +20,4 @@ Python course from Angela Yu on Udemy.
 * [Python Amazon Price Tracking](./Day%2047/Python-Amazon-Price-Tracking/)
 * [Python Auto Cookie Clicker](https://github.com/natural-mess/Python-Auto-Cookie-Clicker)
 * [Python Selenium Gym Booking Automation](https://github.com/natural-mess/Python-Selenium-Gym-Booking-Automation)
+* [Python Auto Tindog Swiping Bot](https://github.com/natural-mess/Python-Auto-Tindog-Swiping-Bot)
