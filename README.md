@@ -22,3 +22,4 @@ Python course from Angela Yu on Udemy.
 * [Python Selenium Gym Booking Automation](https://github.com/natural-mess/Python-Selenium-Gym-Booking-Automation)
 * [Python Auto Tindog Swiping Bot](https://github.com/natural-mess/Python-Auto-Tindog-Swiping-Bot)
 * [Python Internet Speed X Complaint Bot](https://github.com/natural-mess/Python-Internet-Speed-X-Complaint-Bot)
+* [Python Instagram Follower Bot](https://github.com/natural-mess/Python-Instagram-Follower-Bot)

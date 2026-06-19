@@ -1,5 +1,3 @@
-from gettext import find
-
 from dotenv import load_dotenv
 import os
 from selenium import webdriver
