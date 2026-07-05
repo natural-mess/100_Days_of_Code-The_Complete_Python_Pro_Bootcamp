@@ -9,7 +9,7 @@ from selenium.common.exceptions import (
 from dotenv import load_dotenv
 import os
 
-load_dotenv("./.env")
+load_dotenv("D:/API/EnvironmentVariables/.env")
 
 SIMILAR_ACCOUNT = "chefsteps"   # the account whose followers you'll follow
 USERNAME = os.environ.get("SHARE-A-NAAN_USERNAME")       # your Share-a-Naan (or Instagram) username (your email)
