@@ -15,6 +15,8 @@ The main goal is to reduce manual data entry. Instead of copying property addres
 
 This is a practical example of using Python for automation, scraping, and form submission.
 
+![alt text](demo/demo.gif)
+
 ## How the Solution Works
 
 ### 1. Scraping the listings
