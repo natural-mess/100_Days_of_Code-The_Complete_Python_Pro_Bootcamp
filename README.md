@@ -26,3 +26,4 @@ Python course from Angela Yu on Udemy.
 * [Python Zillow Web Scraping and Data Entry](https://github.com/natural-mess/Python-Zillow-WebScraping-DataEntry)
 * [Python Higher or Lower URLs](./Day%2055/higher-lower/)
 * [Bootstrap Tindog Website](https://github.com/natural-mess/Bootstrap-Tindog-Website)([Demo](https://natural-mess.github.io/Bootstrap-Tindog-Website/))
+* [Flask Blog Bootstrap](https://github.com/natural-mess/Flask-Blog-Bootstrap)
