@@ -7,7 +7,7 @@ BLOG_URL = "https://api.npoint.io/c790b4d5cab58020d391"
 app = Flask(__name__)
 
 def get_blog_posts(url):
-    response = requests.get(url=url)
+    response = requests.get(url=url,verify=False)
     all_blog_posts = response.json()
     post_list = []
     for post in all_blog_posts:
@@ -16,15 +16,18 @@ def get_blog_posts(url):
 
     return post_list
 
+all_posts = get_blog_posts(BLOG_URL)
+
 @app.route('/')
 def home():
-    all_posts = get_blog_posts(BLOG_URL)
     return render_template("index.html", all_posts=all_posts)
 
 @app.route('/blog/<int:num>')
 def get_blog(num):
-    all_posts = get_blog_posts(BLOG_URL)
-    return render_template("blog.html", post_data=all_posts[num])
+    index=num-1
+    if index < len(all_posts):
+        return render_template("post.html", post_data=all_posts[index])
+    return "Post not found", 404
 
 if __name__ == "__main__":
     app.run()
