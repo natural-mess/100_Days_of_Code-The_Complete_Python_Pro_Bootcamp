@@ -27,3 +27,4 @@ Python course from Angela Yu on Udemy.
 * [Python Higher or Lower URLs](./Day%2055/higher-lower/)
 * [Bootstrap Tindog Website](https://github.com/natural-mess/Bootstrap-Tindog-Website)([Demo](https://natural-mess.github.io/Bootstrap-Tindog-Website/))
 * [Flask Blog Bootstrap](https://github.com/natural-mess/Flask-Blog-Bootstrap)
+* [Coffee And Wifi](./Day%2062/coffee-and-wifi/)
