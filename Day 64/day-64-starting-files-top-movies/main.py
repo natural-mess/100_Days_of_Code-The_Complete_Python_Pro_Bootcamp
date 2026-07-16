@@ -7,6 +7,8 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 import requests
+import os
+from dotenv import load_dotenv, find_dotenv
 
 '''
 Red underlines? Install the required packages first: 
@@ -24,6 +26,20 @@ This will install the packages from requirements.txt for this project.
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 bootstrap = Bootstrap5(app)
+
+# find .env automagically by walking up directories until it's found
+dotenv_path = find_dotenv()
+# load up the entries as environment variables
+load_dotenv(dotenv_path)
+
+THE_MOVIE_DB_URL = "https://api.themoviedb.org/3/search/movie"
+THE_MOVIE_DB_MOVIE_DETAIL_URL = "https://api.themoviedb.org/3/movie"
+THE_MOVIE_DB_IMG_URL = "https://image.tmdb.org/t/p/w500"
+
+headers = {
+    "accept": "application/json",
+    "Authorization": f"Bearer {os.environ.get('THE_MOVIE_DB_HEADER')}"
+}
 
 # CREATE DB
 class Base(DeclarativeBase):
@@ -43,9 +59,9 @@ class Movie(db.Model):
     title: Mapped[str] = mapped_column(String(250), unique=True, nullable=False)
     year: Mapped[int] = mapped_column(Integer, nullable=False)
     description: Mapped[str] = mapped_column(String(500), nullable=False)
-    rating: Mapped[float] = mapped_column(Float, nullable=False)
-    ranking: Mapped[int] = mapped_column(Integer, nullable=False)
-    review: Mapped[str] = mapped_column(String(250), nullable=False)
+    rating: Mapped[float] = mapped_column(Float, nullable=True)
+    ranking: Mapped[int] = mapped_column(Integer, nullable=True)
+    review: Mapped[str] = mapped_column(String(250), nullable=True)
     img_url: Mapped[str] = mapped_column(String(250), nullable=False)
 
 with app.app_context():
@@ -78,11 +94,16 @@ with app.app_context():
         db.session.add(second_movie)
         db.session.commit()
 
-# Create form
-class MovieForm(FlaskForm):
+# Create edit movie form
+class EditMovieForm(FlaskForm):
     rating = StringField('Your Rating Out of 10 e.g. 7.5', validators=[DataRequired()])
     review = StringField('Your Review', validators=[DataRequired()])
     submit = SubmitField('Done')
+    cancel = SubmitField('Cancel', render_kw={'class':'btn btn-secondary'})
+
+class AddMovieForm(FlaskForm):
+    title = StringField('Movie title', validators=[DataRequired()])
+    submit = SubmitField('Add Movie')
     cancel = SubmitField('Cancel', render_kw={'class':'btn btn-secondary'})
 
 @app.route("/")
@@ -92,7 +113,7 @@ def home():
 
 @app.route("/edit", methods=['GET', 'POST'])
 def edit():
-    form = MovieForm()
+    form = EditMovieForm()
     movie_id = request.args.get("id", type=int)
     movie = db.get_or_404(Movie, movie_id)
 
@@ -115,6 +136,47 @@ def delete():
     db.session.delete(movie)
     db.session.commit()
     return redirect(url_for("home"))
+
+@app.route("/add", methods=["POST", "GET"])
+def add():
+    form = AddMovieForm()
+
+    if form.cancel.data: # if cancel button is clicked, the form.cancel.data will be True
+        return redirect(url_for("home"))
+
+    if form.validate_on_submit():
+        search_movie = form.title.data.replace(' ', '%20')
+        response = requests.get(f"{THE_MOVIE_DB_URL}?query={search_movie}", headers=headers, verify=False)
+        response.raise_for_status()
+        movie_data = response.json()['results']
+        movie_list = []
+        for movie in movie_data:
+            movie_list.append({
+                'id': movie['id'],
+                'title': movie['title'],
+                'release_date': movie['release_date'],
+            })
+        return render_template("select.html", movie_list=movie_list)
+        
+    return render_template("add.html", form=form)
+
+@app.route("/select")
+def select():
+    movie_id = request.args.get("id", type=int)
+    if movie_id:
+        response = requests.get(f"{THE_MOVIE_DB_MOVIE_DETAIL_URL}/{movie_id}", headers=headers, verify=False)
+        response.raise_for_status()
+        movie_detail = response.json()
+        new_movie = Movie(
+            title= movie_detail['original_title'],
+            year= movie_detail['release_date'],
+            description= movie_detail['overview'],
+            img_url= f"{THE_MOVIE_DB_IMG_URL}{movie_detail['poster_path']}",
+        )
+        db.session.add(new_movie)
+        db.session.commit()
+        # new_movie_id = db.session.scalar(db.select(Movie).where(Movie.title==movie_detail['original_title']))
+        return redirect(url_for("edit", id=new_movie.id))
 
 if __name__ == '__main__':
     app.run(debug=True)
