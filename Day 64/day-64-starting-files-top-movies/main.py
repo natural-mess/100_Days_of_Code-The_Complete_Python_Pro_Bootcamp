@@ -27,10 +27,8 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 bootstrap = Bootstrap5(app)
 
-# find .env automagically by walking up directories until it's found
-dotenv_path = find_dotenv()
 # load up the entries as environment variables
-load_dotenv(dotenv_path)
+load_dotenv("D:/API/EnvironmentVariables/.env")
 
 THE_MOVIE_DB_URL = "https://api.themoviedb.org/3/search/movie"
 THE_MOVIE_DB_MOVIE_DETAIL_URL = "https://api.themoviedb.org/3/movie"
@@ -74,7 +72,7 @@ with app.app_context():
             title="Phone Booth",
             year=2002,
             description="Publicist Stuart Shepard finds himself trapped in a phone booth, pinned down by an extortionist's sniper rifle. Unable to leave or receive outside help, Stuart's negotiation with the caller leads to a jaw-dropping climax.",
-            rating=7.3,
+            rating=7.5,
             ranking=10,
             review="My favourite character was the caller.",
             img_url="https://image.tmdb.org/t/p/w500/tjrX2oWRCM3Tvarz38zlZM7Uc10.jpg"
@@ -108,7 +106,12 @@ class AddMovieForm(FlaskForm):
 
 @app.route("/")
 def home():
-    movies = db.session.execute(db.select(Movie)).scalars().all()
+    movies = db.session.execute(db.select(Movie).order_by(Movie.rating)).scalars().all()
+    ranking = 1
+    for movie in movies:
+        movie.ranking = ranking
+        ranking += 1
+    db.session.commit()
     return render_template("index.html", movies=movies)
 
 @app.route("/edit", methods=['GET', 'POST'])
@@ -146,7 +149,7 @@ def add():
 
     if form.validate_on_submit():
         search_movie = form.title.data.replace(' ', '%20')
-        response = requests.get(f"{THE_MOVIE_DB_URL}?query={search_movie}", headers=headers, verify=False)
+        response = requests.get(f"{THE_MOVIE_DB_URL}?query={search_movie}", headers=headers)
         response.raise_for_status()
         movie_data = response.json()['results']
         movie_list = []
@@ -163,20 +166,19 @@ def add():
 @app.route("/select")
 def select():
     movie_id = request.args.get("id", type=int)
-    if movie_id:
-        response = requests.get(f"{THE_MOVIE_DB_MOVIE_DETAIL_URL}/{movie_id}", headers=headers, verify=False)
-        response.raise_for_status()
-        movie_detail = response.json()
-        new_movie = Movie(
-            title= movie_detail['original_title'],
-            year= movie_detail['release_date'],
-            description= movie_detail['overview'],
-            img_url= f"{THE_MOVIE_DB_IMG_URL}{movie_detail['poster_path']}",
-        )
-        db.session.add(new_movie)
-        db.session.commit()
-        # new_movie_id = db.session.scalar(db.select(Movie).where(Movie.title==movie_detail['original_title']))
-        return redirect(url_for("edit", id=new_movie.id))
+    response = requests.get(f"{THE_MOVIE_DB_MOVIE_DETAIL_URL}/{movie_id}", headers=headers)
+    response.raise_for_status()
+    movie_detail = response.json()
+    new_movie = Movie(
+        title= movie_detail['original_title'],
+        year= movie_detail['release_date'],
+        description= movie_detail['overview'],
+        img_url= f"{THE_MOVIE_DB_IMG_URL}{movie_detail['poster_path']}",
+    )
+    db.session.add(new_movie)
+    db.session.commit()
+    # new_movie_id = db.session.scalar(db.select(Movie).where(Movie.title==movie_detail['original_title']))
+    return redirect(url_for("edit", id=new_movie.id))
 
 if __name__ == '__main__':
     app.run(debug=True)

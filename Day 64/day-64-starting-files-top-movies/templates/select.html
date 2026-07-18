@@ -3,6 +3,7 @@
 {% block title %}Select Movie{% endblock %}
 
 {% block content %}
+{% if movie_list %}
 <div class="container">
     <h1 class="heading">Select Movie</h1>
   {% for movie in movie_list %}
@@ -10,6 +11,9 @@
     <a href="{{ url_for('select', id=movie.id) }}"> {{movie.title}} - {{movie.release_date}}</a>
   </p>
   {% endfor %}
-
 </div>
+{% else %}
+  <p>Movie not found</p>
+  <a href="{{ url_for('home') }}"> Back to home </a>
+{% endif %}
 {% endblock %}
