@@ -29,3 +29,4 @@ Python course from Angela Yu on Udemy.
 * [Flask Blog Bootstrap](https://github.com/natural-mess/Flask-Blog-Bootstrap)
 * [Coffee And Wifi](./Day%2062/coffee-and-wifi/)
 * [CineRank — Personal Top Movies Tracker](/Day%2064/day-64-starting-files-top-movies/)
+* [Cafe and Wifi API](https://github.com/natural-mess/cafe-and-wifi-api)
