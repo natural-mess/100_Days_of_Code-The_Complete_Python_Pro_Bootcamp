@@ -31,6 +31,7 @@ include "header.html" %}
       {% endwith %}
       <div class="col-lg-8 col-md-10 mx-auto">
         <!--TODO: render login form here-->
+        <input type="hidden" name="next" value="{{ next_page or '' }}">
         {{render_form(form, novalidate=True, button_map={"submit": "primary"}) }}
       </div>
     </div>
