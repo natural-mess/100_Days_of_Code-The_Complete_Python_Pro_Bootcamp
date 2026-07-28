@@ -12,7 +12,9 @@ from werkzeug.security import generate_password_hash, check_password_hash
 # Import your forms from the forms.py
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 from typing import List
-
+from hashlib import md5
+# There should be an import statement up top
+# from flask_gravatar import Gravatar
 
 '''
 Make sure the required packages are installed: 
@@ -31,6 +33,17 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 ckeditor = CKEditor(app)
 Bootstrap5(app)
+
+# For adding profile images to the comment section
+# This is not supported anymore in latest Flask version, so def avatar(self, size): is added in User class as new solution
+# gravatar = Gravatar(app,
+#                     size=100,
+#                     rating='g',
+#                     default='retro',
+#                     force_default=False,
+#                     force_lower=False,
+#                     use_ssl=False,
+#                     base_url=None)
 
 # TODO: Configure Flask-Login
 login_manager = LoginManager()
@@ -72,6 +85,10 @@ class User(UserMixin, db.Model):
     name: Mapped[str] = mapped_column(String(250), nullable=False)
     posts: Mapped[List["BlogPost"]] = relationship(back_populates="author")
     comments: Mapped[List["Comment"]] = relationship(back_populates="comment_author")
+
+    def avatar(self, size):
+        digest = md5(self.email.lower().encode('utf-8')).hexdigest()
+        return f'https://www.gravatar.com/avatar/{digest}?d=identicon&s={size}'
 
 class Comment(db.Model):
     __tablename__ = "comments"
@@ -166,6 +183,7 @@ def show_post(post_id):
             )
             db.session.add(new_comment)
             db.session.commit()
+            form.comment.data = ""
     return render_template("post.html", post=requested_post, current_user=current_user, comment_form=form)
 
 

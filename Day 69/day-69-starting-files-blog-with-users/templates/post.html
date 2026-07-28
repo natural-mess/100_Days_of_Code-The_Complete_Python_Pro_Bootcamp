@@ -46,7 +46,9 @@
             {% for comment in post.comments %}
             <li>
               <div class="commenterImage">
-                <img src="../static/assets/img/default-profile.jpg" />
+                <!-- <img src="../static/assets/img/default-profile.jpg" /> -->
+                <img src="{{ comment.comment_author.avatar(36) }}">
+                <!-- If Gravatar is configured, then add this in src: 'comment.comment_author.email | gravatar' -->
               </div>
               <div class="commentText">
                 <p>{{ comment.text|safe }}</p>
