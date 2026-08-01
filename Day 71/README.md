@@ -1,0 +1,1 @@
+Final project is at: https://github.com/natural-mess/Flask-Blog-Bootstrap/tree/main
