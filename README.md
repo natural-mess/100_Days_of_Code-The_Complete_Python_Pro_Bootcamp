@@ -2,6 +2,8 @@
 
 Python course from Angela Yu on Udemy.
 
+The repo only contains 81 days from the course with all main content. The rest of the course is portfolio projects, I prefer doing my own projects now.
+
 ## Project list
 * [Python Turtle Race Game](https://github.com/natural-mess/Python-Turtle-Race-Game)
 * [Python Snake Game](https://github.com/natural-mess/Python_Snake_Game)
